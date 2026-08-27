@@ -36,7 +36,7 @@ Windows環境向けの軽量かつフォーマルなディスプレイ制御GUI�
 ```text
 t2-display-blinder/
 ├── cmd/
-│   └── display-blinder/
+│   └── t2-display-blinder/
 │       └── main.go              # アプリケーションのエントリポイント
 ├── internal/
 │   ├── app/
@@ -79,11 +79,11 @@ t2-display-blinder/
 ```cmd
 build.bat
 ```
-※ 自動的にテスト実行後、GUIバイナリ（`bin/display-blinder.exe`）が生成されます。
+※ 自動的にテスト実行後、GUIバイナリ（`bin/t2-display-blinder.exe`）が生成されます。
 
 **手動ビルド:**
 ```powershell
-go build -ldflags="-H windowsgui -s -w" -o bin/display-blinder.exe ./cmd/display-blinder
+go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-display-blinder
 ```
 
 ---
@@ -91,9 +91,9 @@ go build -ldflags="-H windowsgui -s -w" -o bin/display-blinder.exe ./cmd/display
 ## 起動方法
 
 ```powershell
-./bin/display-blinder.exe
+./bin/t2-display-blinder.exe
 ```
-または、エクスプローラーから `bin/display-blinder.exe` をダブルクリックして起動します。
+または、エクスプローラーから `bin/t2-display-blinder.exe` をダブルクリックして起動します。
 
 ---
 

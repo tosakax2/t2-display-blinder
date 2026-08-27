@@ -30,7 +30,7 @@ if %errorlevel% neq 0 (
 echo [2/2] Building application binary...
 :: -H windowsgui hides the command prompt window when launched
 :: -s -w strips debug symbols to reduce binary size
-go build -ldflags="-H windowsgui -s -w" -o bin\display-blinder.exe .\cmd\display-blinder
+go build -ldflags="-H windowsgui -s -w" -o bin\t2-display-blinder.exe .\cmd\t2-display-blinder
 if %errorlevel% neq 0 (
     echo [ERROR] Build failed.
     pause
@@ -39,7 +39,7 @@ if %errorlevel% neq 0 (
 
 echo =======================================================
 echo  Build Succeeded!
-echo  - Output: bin\display-blinder.exe
+echo  - Output: bin\t2-display-blinder.exe
 echo =======================================================
 
 if "%1"=="" (

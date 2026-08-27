@@ -42,7 +42,7 @@ A formal, lightweight, and modern display utility for Windows that provides scre
 ```text
 t2-display-blinder/
 ├── cmd/
-│   └── display-blinder/
+│   └── t2-display-blinder/
 │       └── main.go              # Application entrypoint
 ├── internal/
 │   ├── app/
@@ -89,11 +89,11 @@ t2-display-blinder/
 ```cmd
 build.bat
 ```
-*Automatically runs tests and compiles the GUI binary to `bin\display-blinder.exe`.*
+*Automatically runs tests and compiles the GUI binary to `bin\t2-display-blinder.exe`.*
 
 ### Manual Build
 ```powershell
-go build -ldflags="-H windowsgui -s -w" -o bin/display-blinder.exe ./cmd/display-blinder
+go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-display-blinder
 ```
 
 ---
@@ -101,9 +101,9 @@ go build -ldflags="-H windowsgui -s -w" -o bin/display-blinder.exe ./cmd/display
 ## Usage
 
 ```powershell
-./bin/display-blinder.exe
+./bin/t2-display-blinder.exe
 ```
-Or double-click `bin\display-blinder.exe` in Windows Explorer.
+Or double-click `bin\t2-display-blinder.exe` in Windows Explorer.
 
 ---
 
