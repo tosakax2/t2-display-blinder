@@ -1,10 +1,10 @@
-# T2 Display Blinder
+# t2-display-blinder
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Go Version](https://img.shields.io/badge/Go-1.20%2B-00ADD8.svg)](https://go.dev/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg)](https://microsoft.com/windows)
 
-A formal, lightweight, and modern display utility for Windows that provides screen standby power-off and fullscreen blackout covering all connected monitors through a standalone native GUI window and global shortcuts.
+A formal, lightweight, and modern display utility for Windows (T2 Display Blinder) that provides screen standby power-off and fullscreen blackout covering all connected monitors through a standalone native GUI window and global shortcuts.
 
 [日本語版ドキュメント (README_ja.md)](README_ja.md)
 
@@ -93,7 +93,7 @@ build.bat
 
 ### Manual Build
 ```powershell
-go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-display-blinder
+go build -ldflags="-H windowsgui -s -w" -o bin\t2-display-blinder.exe .\cmd\t2-display-blinder
 ```
 
 ---
@@ -101,7 +101,7 @@ go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-d
 ## Usage
 
 ```powershell
-./bin/t2-display-blinder.exe
+.\bin\t2-display-blinder.exe
 ```
 Or double-click `bin\t2-display-blinder.exe` in Windows Explorer.
 

@@ -1,7 +1,13 @@
-# T2 Display Blinder
+# t2-display-blinder
 
-Windows環境向けの軽量かつフォーマルなディスプレイ制御GUIアプリケーションです。  
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Go Version](https://img.shields.io/badge/Go-1.20%2B-00ADD8.svg)](https://go.dev/)
+[![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg)](https://microsoft.com/windows)
+
+Windows環境向けの軽量かつフォーマルなディスプレイ制御GUIアプリケーション（T2 Display Blinder）です。  
 接続されているディスプレイの省電力スタンバイ（スクリーンオフ）および全画面ブランク（真っ暗な画面での覆工）を、単一の独立したネイティブGUIウィンドウおよびショートカットから実行できます。
+
+[English Documentation (README.md)](README.md)
 
 ---
 
@@ -48,20 +54,22 @@ t2-display-blinder/
 │   ├── hotkey/
 │   │   └── hotkey_windows.go    # グローバルホットキー登録・監視 (Win32 API)
 │   └── config/
-│       └── config.go            # 設定管理構造体およびデフォルト値
+│       ├── config.go            # 設定管理構造体およびデフォルト値
+│       └── config_test.go       # 設定ユニットテスト
 ├── web/
 │   ├── assets.go                # embed.FS による app/ 配下のアセット埋め込み
+│   ├── assets_test.go           # 埋め込みアセットテスト
 │   └── app/
 │       ├── index.html           # フォーマル・モダンなUI構造
 │       ├── style.css            # 洗練されたダークテーマスタイル
 │       └── app.js               # フロントエンドロジック・バインディング呼び出し
 ├── .gitignore
-├── build.bat
+├── build.bat                    # ワンクリックビルドスクリプト
 ├── go.mod
 ├── go.sum
-├── LICENSE
-├── README.md
-└── README_ja.md
+├── LICENSE                      # MITライセンス
+├── README.md                    # 英語ドキュメント
+└── README_ja.md                 # 日本語ドキュメント
 ```
 
 ---
@@ -79,11 +87,11 @@ t2-display-blinder/
 ```cmd
 build.bat
 ```
-※ 自動的にテスト実行後、GUIバイナリ（`bin/t2-display-blinder.exe`）が生成されます。
+※ 自動的にテスト実行後、GUIバイナリ（`bin\t2-display-blinder.exe`）が生成されます。
 
 **手動ビルド:**
 ```powershell
-go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-display-blinder
+go build -ldflags="-H windowsgui -s -w" -o bin\t2-display-blinder.exe .\cmd\t2-display-blinder
 ```
 
 ---
@@ -91,9 +99,9 @@ go build -ldflags="-H windowsgui -s -w" -o bin/t2-display-blinder.exe ./cmd/t2-d
 ## 起動方法
 
 ```powershell
-./bin/t2-display-blinder.exe
+.\bin\t2-display-blinder.exe
 ```
-または、エクスプローラーから `bin/t2-display-blinder.exe` をダブルクリックして起動します。
+または、エクスプローラーから `bin\t2-display-blinder.exe` をダブルクリックして起動します。
 
 ---
 
